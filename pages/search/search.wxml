@@ -1,0 +1,30 @@
+<!--
+scanble.wxml
+res.devices的结构
+    名称                   类型            说明
+    name                   string         蓝牙设备名称,某些设备可能没有
+    deviceId               string         用于区分设备的id
+    RSSI                   number         蓝牙信号的强弱
+    advertisData           ArrayBuffer    当前蓝牙设备的广播数据段中的 ManufacturerData 数据段。
+    advertisServiceUUIDs   Array.<string> 当前蓝牙设备的广播数据段中的 ServiceUUIDs 数据段
+    localName              string         当前蓝牙设备的广播数据段中的 LocalName 数据段
+    serviceData            Object         当前蓝牙设备的广播数据段中的 ServiceData 数据段
+-->
+
+<view class="title">设备列表</view>
+
+<view hover-class="hover_bgc" 
+wx:for="{{list}}" 
+wx:key="{{item.deviceId}}" 
+bindtap="connectDevice" 
+data-deviceid="{{item.deviceId}}" 
+data-name="{{item.name}}" 
+data-rssi="{{item.RSSI}}"
+data-advdata="{{item.advertisData}}">
+  <view class="line"></view>
+  <view class="item">
+    {{index}} : {{item.deviceId}} - {{item.name}}
+  </view>
+</view>
+
+<view class="line"></view>
