@@ -10,7 +10,7 @@ Page({
 
   scanList: function () {
     wx.navigateTo({
-      url: '../scanble/scanble'
+      url: '../search/search'
     })
   }
   
