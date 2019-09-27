@@ -44,19 +44,20 @@ Page({
            * interval:上报设备的间隔,0表示立即上报.
            */
           services: [],
+          allowDuplicatesKey : false,
           success: function (res) {
-            console.log("startBluetoothDevicesDiscovery: success");
+            console.log("开启蓝牙搜寻周边设备");
             console.log(res);
             //监听寻找到新设备的事件
             wx.onBluetoothDeviceFound(function (res) {
-              console.log('new device list has founded');
+              console.log('发现新的蓝牙设备');
               console.log(res);
-              //found one device only, reflesh device list each time
+              //本机记录设备信息
               dev.push(res.devices[0]);
               that.setData({
                 list: dev
               });
-              console.log('that.setData: list');
+              console.log('当前设备列表:');
               console.log(that.data.list);
             })
           },
@@ -70,7 +71,7 @@ Page({
         //弹窗进行提醒 是否开启了蓝牙
         wx.showModal({
           title: '提示',
-          content: '请确认是否开启了蓝牙',
+          content: '请确认是否开启了蓝牙和定位',
           showCancel:false,
           success: function(res){
             if(res.confirm){

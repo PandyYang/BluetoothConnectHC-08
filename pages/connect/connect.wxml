@@ -34,7 +34,7 @@ bindTap:点击事件
 
 <view wx:if="{{select == 1}}">
 <view class="title">selected service</view>
-<view class="title">{{serviceUUID}}</view>
+<view class="title">{{ res.services[i].uuid}}</view>
 </view>
 
 <view class="connect" bindtap="getCharc">获取characteristics</view>
@@ -43,10 +43,10 @@ bindTap:点击事件
 <view wx:for="{{characteristics}}">
 <view class="line"></view>
   <view class="item">{{item.uuid}}</view>
-  <view class="item">read - {{item.properties.read}}</view>
-  <view class="item">write - {{item.properties.write}}</view>
-  <view class="item">notify - {{item.properties.notify}}</view>
-  <view class="item">indicate - {{item.properties.indicate}}</view>
+  <view class="item">read - {{res.characteristics[i].properties.read}}</view>
+  <view class="item">write - {{res.characteristics[i].properties.write}}</view>
+  <view class="item">notify - {{res.characteristics[i].properties.notify}}</view>
+  <view class="item">indicate - {{res.characteristics[i].properties.indicate}}</view>
 </view>
 <view class="line"></view>
 
