@@ -1,27 +1,35 @@
-<!--connble.wxml-->
+<!--
+连接指定蓝牙后显示的蓝牙信息模板
+bindTap:点击事件
+-->
 
-<view class="title">广播信息</view>
+<view class="title">蓝牙信息</view>
 <view class="line"></view>
-<view class="item">RSSI      = {{RSSI}}</view>
+<view class="item">RSSI       = {{RSSI}}</view>
 <view class="line"></view>
-<view class="item">name      = {{name}}</view>
+<view class="item">name       = {{name}}</view>
 <view class="line"></view>
-<view class="item">deviceId  = {{deviceId}}</view>
+<view class="item2">deviceId  = {{deviceId}}</view>
 <view class="line"></view>
-<view class="item">advData   = {{advData}}</view>
+<view class="line"></view>
+<view class="item">advData    = {{advData}}</view>
 <view class="line"></view>
 
 <view class="connect" bindtap="bindConnect">建立连接</view>
 
 <view class="title">service uuid / primary</view>
+
+
 <view hover-class="hover_bgc"
  wx:key="{{item.uuid}}"
  wx:for="{{serviceList}}"
  bindtap="selectUUID" 
  data-uuid="{{item.uuid}}">
 <view class="line"></view>
-  <view class="item">{{item.uuid}} - {{item.isPrimary}}</view>
+  <view class="item2">{{item.uuid}} - {{item.isPrimary}}</view>
 </view>
+
+
 <view class="line"></view>
 
 <view wx:if="{{select == 1}}">
@@ -41,3 +49,8 @@
   <view class="item">indicate - {{item.properties.indicate}}</view>
 </view>
 <view class="line"></view>
+
+<view class="container">
+  <text style="font-size:medium;margin-top:10px">接收内容：</text>
+  <input class="input" disabled value="{{receiveText}}" maxlength="20"/>
+</view>

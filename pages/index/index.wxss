@@ -13,5 +13,5 @@
   width: 100%;
   font-size: 60rpx;
   text-align: center;
-  background-color: #ADD8E6;
+  background-color: rgb(74, 170, 202);
 }

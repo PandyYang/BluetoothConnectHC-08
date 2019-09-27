@@ -11,5 +11,6 @@
     "enablePullDownRefresh": false,
     "backgroundColor": "#bbbbbb",
     "backgroundTextStyle": "dark"
-  }
+  },
+  "sitemapLocation": "sitemap73.json"
 }

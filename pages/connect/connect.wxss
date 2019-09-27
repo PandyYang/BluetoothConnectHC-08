@@ -10,9 +10,20 @@
 .item{
   height: 50rpx;
 }
+.item2{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
 .connect{
   margin-top: 5rpx;
   margin-bottom: 5rpx;
   text-align: center;
-  background-color: #ADD8E6;
+  background-color: rgb(39, 168, 211);
+}
+.container {
+  padding: 30rpx;
+  align-items: left;
 }

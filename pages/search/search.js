@@ -1,11 +1,22 @@
 /** scanble.js */
 
-Page({
-  data: {
-    logs: [],
-    list: [],
-  },
+// ArrayBuffer转16进度字符串示例
+function ab2hex(buffer) {
+  var hexArr = Array.prototype.map.call(
+    new Uint8Array(buffer),
+    function (bit) {
+      return ('00' + bit.toString(16)).slice(-2)
+    }
+  )
+  return hexArr.join('');
+}
 
+Page({
+  //页面初始化数据
+  data: {
+    list: [],//存放设备
+  },
+  //监听页面的显示
   onShow: function () {
     console.log('onShow');
     var that = this;
@@ -27,8 +38,10 @@ Page({
         wx.startBluetoothDevicesDiscovery({
           /**
            * 要搜索的蓝牙设备主 service 的 uuid 列表。某些蓝牙设备会广播自己的主 service 的 uuid。
-           * 如果设置此参数，则只搜索广播包有对应 uuid 的主服务的蓝牙设备。建议主要通过该参数过滤掉周边不需要处理的其他蓝牙设备。
-           * 此外参数allowDuplicatesKey还可以设置是否允许重复上报同一设备;interval:上报设备的间隔,0表示立即上报.
+           * 如果设置此参数，则只搜索广播包有对应 uuid 的主服务的蓝牙设备。建议主要通过该参数过滤掉
+           * 周边不需要处理的其他蓝牙设备。
+           * 此外参数allowDuplicatesKey还可以设置是否允许重复上报同一设备;
+           * interval:上报设备的间隔,0表示立即上报.
            */
           services: [],
           success: function (res) {
@@ -54,16 +67,44 @@ Page({
       fail: function (res) {
         console.log("openBluetoothAdapter: fail");
         console.log(res);
-        wx.showToast({
-          title: '搜索失败，请确认已经打开蓝牙',
-          icon: "loading",
-          duration: 3000
+        //弹窗进行提醒 是否开启了蓝牙
+        wx.showModal({
+          title: '提示',
+          content: '请确认是否开启了蓝牙',
+          showCancel:false,
+          success: function(res){
+            if(res.confirm){
+              console.log("用户点击了确定")
+                //返回至搜索蓝牙设备页面
+                wx.redirectTo({
+                  url: '../index/index',
+                  success: function () {
+                    //success
+                  },
+                  fail: function () {
+                    //fail
+                  },
+                  complete: function () {
+                    //complete
+                  }
+                })
+            }
+          }
         })
+
+        /**
+         *  //显示消息提示框2
+         *  wx.showToast({
+         *  title: '搜索失败，请确认已经打开蓝牙',
+         *  icon: "loading",
+         *  duration: 3000
+         *  })
+         */
+       
       },
     })
-
   },
-
+  //页面进行卸载 设备已搜索成功
   onUnload: function () {
     //停止搜索蓝牙设备
     wx.stopBluetoothDevicesDiscovery({
@@ -79,9 +120,9 @@ Page({
     })
 
   },
-  
+  //开始连接设备 e对象中有当前标签属性值 其有两个对象currentTarget和target
   connectDevice: function (e) {
-    //停止搜索附近的蓝牙外围设备
+    //停止搜索附近的蓝牙外围设备 准备进行设备连接
     wx.stopBluetoothDevicesDiscovery({
       success: function (res) {
         console.log(res)
@@ -96,7 +137,7 @@ Page({
     console.log(name);
     console.log(rssi);
     console.log(advdata);
-    //导航到包含数据的新connble页
+    //导航到包含数据的新connble页 ?后面可以携带信息
     wx.navigateTo({
       url: '../connect/connect?deviceId=' + deviceid + '&name=' + name + '&RSSI=' + rssi + '&advData=' + advdata,
     })

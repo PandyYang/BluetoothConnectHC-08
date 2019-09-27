@@ -76,7 +76,7 @@ Page({
 
   getCharc: function () {
     var that = this;
-    if(that.data.select == ''){
+    if (that.data.select == '') {
       wx.showToast({
         title: '请先选择service uuid',
         icon: 'loading',
@@ -87,14 +87,34 @@ Page({
     wx.getBLEDeviceCharacteristics({
       deviceId: that.data.deviceId,
       serviceId: that.data.serviceUUID,
-      success: function(res) {
+      success: function (res) {
         console.log('getBLEDeviceCharacteristics:', res.characteristics)
         that.setData({
           characteristics: res.characteristics,
         })
+        wx.notifyBLECharacteristicValueChange({
+          deviceId: that.data.deviceId,
+          serviceId: that.data.serviceId,
+          characteristicId: that.data.characteristics.uuid,
+          state: true,
+          success: function(res) {
+            console.log('启用notify成功')
+          },
+        })
       },
     })
-
+    wx.onBLEConnectionStateChange(function (res) {
+      console.log(res.connected)
+      that.setData({
+        connected: res.connected
+      })
+    })
+    wx.onBLECharacteristicValueChange(function (res) {
+      var receiveText = app.buf2string(res.value)
+      console.log('接收到数据：' + receiveText)
+      that.setData({
+        receiveText: receiveText
+      })
+    })
   },
-
 })

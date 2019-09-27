@@ -9,6 +9,7 @@ res.devices的结构
     advertisServiceUUIDs   Array.<string> 当前蓝牙设备的广播数据段中的 ServiceUUIDs 数据段
     localName              string         当前蓝牙设备的广播数据段中的 LocalName 数据段
     serviceData            Object         当前蓝牙设备的广播数据段中的 ServiceData 数据段
+增加监听bindtap事件
 -->
 
 <view class="title">设备列表</view>

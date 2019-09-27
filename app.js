@@ -1,10 +1,8 @@
 /** app.js */
 
 App({
-
   onLaunch: function () {
-    console.log('onLoad')
+    console.log('小程序初始化完成~')
 
   },
-
 })

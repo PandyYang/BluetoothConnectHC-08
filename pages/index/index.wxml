@@ -4,6 +4,5 @@
 -->
 <view class="container">
 <image class="icon" src="../../images/searchicon.jpg"></image>
-<icon type="search" size="14" color="black"></icon>
 <view class="text" hover-class="hover_bgc" bindtap="scanList">搜索蓝牙设备</view>
 </view>
