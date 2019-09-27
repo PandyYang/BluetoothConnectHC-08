@@ -1,6 +1,6 @@
 /** scanble.js */
 
-// ArrayBuffer转16进度字符串示例
+// ArrayBuffer转16进度字符串示例 待用
 function ab2hex(buffer) {
   var hexArr = Array.prototype.map.call(
     new Uint8Array(buffer),

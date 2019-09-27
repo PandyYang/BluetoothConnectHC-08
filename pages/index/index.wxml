@@ -4,5 +4,6 @@
 -->
 <view class="container">
 <image class="icon" src="../../images/searchicon.jpg"></image>
-<view class="text" hover-class="hover_bgc" bindtap="scanList">搜索蓝牙设备</view>
+<button type="primary" class="button" bindtap="scanList">获取蓝牙列表</button>
+<button type="primary" class="button" bindtap="bluetoothState">查看蓝牙状态</button>
 </view>
