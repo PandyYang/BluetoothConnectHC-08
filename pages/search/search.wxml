@@ -20,11 +20,12 @@ wx:key="{{item.deviceId}}"
 bindtap="connectDevice" 
 data-deviceid="{{item.deviceId}}" 
 data-name="{{item.name}}" 
+data-localName="{{item.localName}}"
 data-rssi="{{item.RSSI}}"
 data-advdata="{{item.advertisData}}">
   <view class="line"></view>
-  <view class="item">
-    {{index}} : {{item.deviceId}} - {{item.name}}
+  <view class="item2">
+    设备{{index}} : {{item.deviceId}} - {{item.name}} - {{item.localName}}
   </view>
 </view>
 

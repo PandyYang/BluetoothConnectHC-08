@@ -15,7 +15,10 @@ bindTap:点击事件
 <view class="item">advData    = {{advData}}</view>
 <view class="line"></view>
 
-<view class="connect" bindtap="bindConnect">建立连接</view>
+<button class="connect" bindtap="bindConnect">
+  <image class="btnImg" src="../../images/more/cactus_571px_1234830_easyicon.net.png"></image>
+  <view>建立连接</view>
+</button>
 
 <view class="title">service uuid / primary</view>
 
@@ -37,7 +40,10 @@ bindTap:点击事件
 <view class="title">{{ res.services[i].uuid}}</view>
 </view>
 
-<view class="connect" bindtap="getCharc">获取characteristics</view>
+<button class="connect" bindtap="getCharc">
+  <image class="btnImg" src="../../images/more/cactus_571px_1234830_easyicon.net.png"></image>
+  <view>获取特征值</view>
+</button>
 
 <view class="title">characteristics</view>
 <view wx:for="{{characteristics}}">
@@ -51,6 +57,5 @@ bindTap:点击事件
 <view class="line"></view>
 
 <view class="container">
-  <text style="font-size:medium;margin-top:10px">接收内容：</text>
-  <input class="input" disabled value="{{receiveText}}" maxlength="20"/>
+  <text style="font-size:medium;margin-top:10px">接收到的消息：{{hex}}</text>
 </view>

@@ -17,11 +17,31 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-.connect{
-  margin-top: 5rpx;
-  margin-bottom: 5rpx;
-  text-align: center;
-  background-color: rgb(39, 168, 211);
+.connect {
+  width: 80%;
+  margin-top: 20rpx;
+  background-color: burlywood;
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnImg {
+  margin-right: 8rpx;
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.btn1::after {
+  border-radius: 98rpx;
+  border: 0; 
+}
+
+.hover {
+  background:  rgb(236, 179, 156);
 }
 .container {
   padding: 30rpx;
