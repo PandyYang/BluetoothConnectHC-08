@@ -4,7 +4,16 @@
 -->
 <view class="container">
 <image class="icon" src="../../images/searchicon.jpg"></image>
-<button type="primary" class="button" bindtap="scanList">获取蓝牙列表</button>
-<button type="primary" class="button" bindtap="bluetoothState">查看蓝牙状态</button>
-<button type="primary" class="button" bindtap="returnWel">返回欢迎页面</button>
+<button type="primary" class="connect" bindtap="scanList">
+  <image class="btnImg" src="../../images/more/cactus_571px_1234830_easyicon.net.png"></image>
+  <view>获取蓝牙列表</view>
+</button>
+<button type="primary" class="connect" bindtap="bluetoothState">
+  <image class="btnImg" src="../../images/more/cactus_571px_1234830_easyicon.net.png"></image>
+  <view>查看蓝牙状态</view>
+</button>
+<button type="primary" class="connect" bindtap="returnWel">
+  <image class="btnImg" src="../../images/more/cactus_571px_1234830_easyicon.net.png"></image>
+  <view>返回欢迎页面</view>
+</button>
 </view>

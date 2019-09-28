@@ -44,7 +44,7 @@ Page({
            * interval:上报设备的间隔,0表示立即上报.
            */
           services: [],
-          allowDuplicatesKey : false,
+
           success: function (res) {
             console.log("开启蓝牙搜寻周边设备");
             console.log(res);
@@ -142,7 +142,7 @@ Page({
     wx.navigateTo({
       url: '../connect/connect?deviceId=' + deviceid + '&name=' + name + '&RSSI=' + rssi + '&advData=' + advdata,
     })
-
+    
   },
 
 })

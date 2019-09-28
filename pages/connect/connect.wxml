@@ -1,61 +1,7 @@
-<!--
-连接指定蓝牙后显示的蓝牙信息模板
-bindTap:点击事件
--->
-
-<view class="title">蓝牙信息</view>
-<view class="line"></view>
-<view class="item">RSSI       = {{RSSI}}</view>
-<view class="line"></view>
-<view class="item">name       = {{name}}</view>
-<view class="line"></view>
-<view class="item2">deviceId  = {{deviceId}}</view>
-<view class="line"></view>
-<view class="line"></view>
-<view class="item">advData    = {{advData}}</view>
-<view class="line"></view>
-
-<button class="connect" bindtap="bindConnect">
-  <image class="btnImg" src="../../images/more/cactus_571px_1234830_easyicon.net.png"></image>
-  <view>建立连接</view>
-</button>
-
-<view class="title">service uuid / primary</view>
-
-
-<view hover-class="hover_bgc"
- wx:key="{{item.uuid}}"
- wx:for="{{serviceList}}"
- bindtap="selectUUID" 
- data-uuid="{{item.uuid}}">
-<view class="line"></view>
-  <view class="item2">{{item.uuid}} - {{item.isPrimary}}</view>
-</view>
-
-
-<view class="line"></view>
-
-<view wx:if="{{select == 1}}">
-<view class="title">selected service</view>
-<view class="title">{{ res.services[i].uuid}}</view>
-</view>
-
-<button class="connect" bindtap="getCharc">
-  <image class="btnImg" src="../../images/more/cactus_571px_1234830_easyicon.net.png"></image>
-  <view>获取特征值</view>
-</button>
-
-<view class="title">characteristics</view>
-<view wx:for="{{characteristics}}">
-<view class="line"></view>
-  <view class="item">{{item.uuid}}</view>
-  <view class="item">read - {{res.characteristics[i].properties.read}}</view>
-  <view class="item">write - {{res.characteristics[i].properties.write}}</view>
-  <view class="item">notify - {{res.characteristics[i].properties.notify}}</view>
-  <view class="item">indicate - {{res.characteristics[i].properties.indicate}}</view>
-</view>
-<view class="line"></view>
-
 <view class="container">
-  <text style="font-size:medium;margin-top:10px">接收到的消息：{{hex}}</text>
+  <text style="font-size:medium;word-break:break-all">设备名称：{{name}}</text>
+  <text style="font-size:x-small;color:gray;word-break:break-all">设备ID：{{deviceId}}</text>
+  <text style="font-size:x-small;color:gray">状态：{{connected?"已连接":"已断开"}}</text>
+  <text style="font-size:medium;margin-top:10px">接收内容：</text>
+  <input class="input" disabled value="{{receiveText}}" maxlength="20"/>
 </view>

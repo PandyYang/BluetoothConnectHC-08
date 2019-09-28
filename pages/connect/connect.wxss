@@ -1,49 +1,18 @@
-/* connble.wxss */
-
-.title {
-  padding: 5rpx 40rpx 5rpx;
-  font-size: 32rpx;
-  text-align: center;
-  color: #666666;
-}
-
-.item{
-  height: 50rpx;
-}
-.item2{
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-.connect {
-  width: 80%;
-  margin-top: 20rpx;
-  background-color: burlywood;
-  color: white;
-  border-radius: 98rpx;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.btnImg {
-  margin-right: 8rpx;
-  width: 46rpx;
-  height: 46rpx;
-}
-
-.btn1::after {
-  border-radius: 98rpx;
-  border: 0; 
-}
-
-.hover {
-  background:  rgb(236, 179, 156);
+page {
+  background-color: #f8f8f8;
 }
 .container {
   padding: 30rpx;
   align-items: left;
+}
+.input {
+  margin-top:3px;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+}
+.button {
+  position: fixed;
+  width: 690rpx;
+  bottom: 30rpx;
 }
