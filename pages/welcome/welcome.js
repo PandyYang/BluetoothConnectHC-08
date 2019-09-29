@@ -19,22 +19,7 @@ Page({
     })
   },
   onShow: function () {
-    let that = this
-    let userInfo = wx.getStorageSync('userInfo')
-    if (!userInfo) {
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-          })
-        }
-      })
-    } else {
-      that.setData({
-        userInfo: userInfo
-      })
-    }
+    
   },
   onReady: function () {
     var that = this;
