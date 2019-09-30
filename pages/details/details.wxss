@@ -1,0 +1,100 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+.xinlv{
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 200px;
+  left: 100px;
+}
+
+.ceshi1{
+  position: absolute;
+  top: 200px;
+  left: 170px;
+}
+.maibo{
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 270px;
+  left: 100px;
+}
+.ceshi2{
+  position: absolute;
+  top: 270px;
+  left: 170px;
+}
+.input1 {
+  position: absolute;
+  margin-top:3px;
+  width: 120px;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  top: 220px;
+  left: 170px;
+}
+
+.input2 {
+  position: absolute;
+  margin-top:3px;
+  width: 120px;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  top: 290px;
+  left: 170px;
+
+}
+.text1{
+  position: absolute;
+  color: rgba(7, 7, 7, 0.575);
+  font-size: 150%;
+  margin-top: 30px;
+}
+
+
+/* CSS Document */
+.anniu{
+display:block;
+width:120px;
+height:40px;
+background-color:rgb(42, 228, 197);
+color:#FFFFFF;
+text-align:center;
+font-size:18px;
+line-height:40px;
+border-radius: 25px;
+border:none;
+box-shadow:none;
+text-decoration: none;
+transition: box-shadow 0.5s;
+-webkit-transition: box-shadow 0.5s;
+}
+.anniu:hover{
+    box-shadow:0px 0px 5px 1px #808080;
+}
+.anniu:active{
+    box-shadow:0px 0px 5px 1px #FF0000;
+}
+.button{
+  position: absolute;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  top: 350px;
+  left: 100px;
+}

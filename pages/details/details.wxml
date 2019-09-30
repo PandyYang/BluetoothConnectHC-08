@@ -1,0 +1,19 @@
+<view class="container"><text class="text1">生命在于运动</text>
+  <text>{{time}}</text>
+</view>
+
+<view>
+  <image class="xinlv" src="../../images/details/xinlv.jpg"></image>
+  <text class="ceshi1">心率</text>
+  <input class="input1" disabled value="{{receiveText}}" maxlength="10"/>
+</view>
+
+<view>
+  <image class="maibo" src="../../images/details/maibo.jpg"></image>
+  <text class="ceshi2">脉搏</text>
+  <input class="input2" disabled value="{{receiveText}}" maxlength="10"/>
+</view>
+
+<view class="report" bindtap="report">
+  <button class="button">点击生成健康报告</button>
+</view>

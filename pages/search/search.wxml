@@ -10,6 +10,7 @@ res.devices的结构
     localName              string         当前蓝牙设备的广播数据段中的 LocalName 数据段
     serviceData            Object         当前蓝牙设备的广播数据段中的 ServiceData 数据段
 增加监听bindtap事件
+  wx:if="{{item.name}}" 过滤名称为null的设备
 -->
 
 <view class="title">设备列表</view>
@@ -26,9 +27,10 @@ data-advdata="{{item.advertisData}}">
   <view class="line"></view>
 
   <view class="item2">
-    <text wx:if="{{item.name && item.deviceId}}">
-      新设备: {{item.deviceId}} - {{item.name}} - {{item.localName}}</text>  
-    </view>
+    <text>
+      新设备: {{item.deviceId}} - {{item.name}} - {{item.localName}}
+    </text>  
   </view>
+</view>
   
 <view class="line"></view>

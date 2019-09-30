@@ -16,3 +16,6 @@ page {
   width: 690rpx;
   bottom: 30rpx;
 }
+.to-details{
+  align-items: center;
+}

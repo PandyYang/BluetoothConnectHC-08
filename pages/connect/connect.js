@@ -85,6 +85,7 @@ Page({
             that.setData({
               receiveText: receiveText
             })
+            var text = receiveText;
           })
       },
       onReady: function() {
@@ -99,6 +100,12 @@ Page({
       fail: function() {
         //创建连接失败
       }
+    })
+  },
+  togo:function(e){
+    var receiveText = e.currentTarget.dataset.receiveText;
+    wx.navigateTo({
+      url: '../details/details?receiveText=' + receiveText,
     })
   }
 })

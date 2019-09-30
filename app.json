@@ -4,7 +4,8 @@
     "pages/welcome/welcome",
     "pages/index/index",
     "pages/search/search",
-    "pages/connect/connect"
+    "pages/connect/connect",
+    "pages/details/details"
   ],
   "window": {
     "navigationBarBackgroundColor": "#000000",

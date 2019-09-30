@@ -3,5 +3,8 @@
   <text style="font-size:x-small;color:gray;word-break:break-all">设备ID：{{deviceId}}</text>
   <text style="font-size:x-small;color:gray">状态：{{connected?"已连接":"已断开"}}</text>
   <text style="font-size:medium;margin-top:10px">接收内容：</text>
-  <input class="input" disabled value="{{receiveText}}" maxlength="20"/>
+  <input class="input" disabled value="{{receiveText}}" data-receive-text='{{receiveText}}' maxlength="20"/>
+    <view class="click" bindtap="togo">
+      <text class="to-details">进入详情页</text>
+    </view>
 </view>
