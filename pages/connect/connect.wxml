@@ -1,10 +1,9 @@
-<view class="container">
-  <text style="font-size:medium;word-break:break-all">设备名称：{{name}}</text>
-  <text style="font-size:x-small;color:gray;word-break:break-all">设备ID：{{deviceId}}</text>
-  <text style="font-size:x-small;color:gray">状态：{{connected?"已连接":"已断开"}}</text>
-  <text style="font-size:medium;margin-top:10px">接收内容：</text>
-  <input class="input" disabled value="{{receiveText}}" data-receive-text='{{receiveText}}' maxlength="20"/>
-    <view class="click" bindtap="togo">
-      <text class="to-details">进入详情页</text>
-    </view>
+<view class="receiver_container">{{numberText}}</view>
+
+<view class="label">接收字节：<span class="num">{{receiverLength}}</span>字节<button type="button" bindtap="clearReceiverText">清除</button>
 </view>
+
+  <view class="click">
+    <text class="to-details" bindtap="togo">跳转至详情页</text>
+  </view>
+

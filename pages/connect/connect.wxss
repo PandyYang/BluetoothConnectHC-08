@@ -1,21 +1,72 @@
-page {
-  background-color: #f8f8f8;
+.label {
+  position: relative;
+  padding: 0 5px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 12px;
+  color: #757575;
+  background-color: #EEE;
 }
-.container {
-  padding: 30rpx;
-  align-items: left;
+.label button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 0 1.5em;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  text-align: center;
 }
-.input {
-  margin-top:3px;
+.receiver_container {
+  margin: 5px;
+  height: 200px;
+  border: 1px solid #2d2d2d;
+  overflow-x: scroll;
+}
+.send_container {
+  margin: 5px;
+  border: 1px solid #2d2d2d;
+  overflow: auto;
+}
+.placeholder {
+  color: #dedede;
+}
+.send {
+  margin: 0 5px;
+}
+.group {
+  margin: 0 5px;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.group .ops {
+  margin-right: 50px;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+}
+.ops_label {
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #d0d0d0;
+}
+.ops_content {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+}
+.group .ops input {
+  margin-right: 10px;
+  text-indent: 5px;
+  border: 1px solid #757575;
+}
+.group button {
   width: 100%;
-  border: 1px solid lightgray;
-  border-radius: 6px;
 }
-.button {
-  position: fixed;
-  width: 690rpx;
-  bottom: 30rpx;
-}
+
 .to-details{
   position: absolute;
   background-color: #4CAF50;
@@ -29,5 +80,5 @@ page {
   margin: 4px 2px;
   cursor: pointer;
   top: 350px;
-  left: 100px;
+  left: 110px;
 }

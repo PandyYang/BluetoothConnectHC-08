@@ -5,13 +5,13 @@
 <view>
   <image class="xinlv" src="../../images/details/xinlv.jpg"></image>
   <text class="ceshi1">心率</text>
-  <input class="input1" disabled value="{{receiveText}}" maxlength="10"/>
+  <input class="input1" disabled value="{{numText}}" maxlength="10"/>
 </view>
 
 <view>
   <image class="maibo" src="../../images/details/maibo.jpg"></image>
   <text class="ceshi2">脉搏</text>
-  <input class="input2" disabled value="{{receiveText}}" maxlength="10"/>
+  <input class="input2" disabled value="70" maxlength="10"/>
 </view>
 
 <view class="report" bindtap="report">

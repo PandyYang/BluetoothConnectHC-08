@@ -4,6 +4,8 @@
     "pages/welcome/welcome",
     "pages/index/index",
     "pages/search/search",
+    "pages/service/service",
+    "pages/characteristic/characteristic",
     "pages/connect/connect",
     "pages/details/details"
   ],
