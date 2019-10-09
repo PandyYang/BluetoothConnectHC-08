@@ -13,6 +13,7 @@ Page({
       url: '../search/search'
     })
   },
+  //返回欢迎页面
   returnWel: function(){
     wx.navigateTo({
       url: '../welcome/welcome',

@@ -7,7 +7,8 @@
     "pages/service/service",
     "pages/characteristic/characteristic",
     "pages/connect/connect",
-    "pages/details/details"
+    "pages/details/details",
+    "pages/details/report"
   ],
   "window": {
     "navigationBarBackgroundColor": "#000000",
